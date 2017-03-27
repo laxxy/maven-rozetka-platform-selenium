@@ -311,14 +311,13 @@
                             <mailssl>true</mailssl>
                             <mailAltConfig>true</mailAltConfig>
                             <mailuser>tess.testss@gmail.com</mailuser>
-                            <mailpassword>321654789</mailpassword>
+                            <mailpassword></mailpassword>
                             <from>tess.testss@gmail.com</from>
                             <receivers>
                                 <receiver></receiver>
-                                <receiver>${email}</receiver>
                             </receivers>
 
-                            <subject>Testing result of fotobook-platform.com</subject>
+                            <subject>Testing result of rozetka-platform.com</subject>
                             <failonerror>true</failonerror>
                             <htmlMessage>
                                 <![CDATA[

@@ -48,6 +48,7 @@ public class MainPage extends BasePage {
     @Step
     public MainPage selectCategoryByName(final String name) {
         menu.findElement(By.xpath(String.format(".//a[contains(text(),'%s')]", name))).click();
+        waitForPageLoad();
         return this;
     }
 }

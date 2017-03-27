@@ -26,6 +26,7 @@ public class MainTest extends BaseTest {
         String category = "Смартфоны";
         String size = "До 4";
         String limit = "6000";
+        int manCount = 5;
 
         mainPage.openMainPage();
 
@@ -44,7 +45,9 @@ public class MainTest extends BaseTest {
         boolean checkboxCheckedByValue = categoryPage.isCheckboxCheckedByValue(size);
         Assert.assertTrue(checkboxCheckedByValue, String.format("Display size: [%s] was not selected!", size));
 
-        categoryPage.setCostUpperLimit(limit);
+        categoryPage
+                .setCostUpperLimit(limit)
+                .selectRandomManufacturers(manCount);
     }
 
 }

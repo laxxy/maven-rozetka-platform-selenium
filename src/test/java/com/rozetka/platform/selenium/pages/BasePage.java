@@ -113,11 +113,13 @@ public class BasePage {
     }
 
     protected WebElement waitForElementNotMove(final WebElement element) {
-        wait.until((ExpectedCondition<Boolean>) wdriver -> {
-            Point loc = element.getLocation();
-            wait(500);
-            return element.getLocation().equals(loc);
-        });
+        try {
+            wait.until((ExpectedCondition<Boolean>) wdriver -> {
+                Point loc = element.getLocation();
+                wait(500);
+                return element.getLocation().equals(loc);
+            });
+        } catch (Exception ignored){}
         return element;
     }
 
@@ -137,6 +139,7 @@ public class BasePage {
     protected void typeText(WebElement webElement, String text) {
         webElement.clear();
         webElement.sendKeys(text);
+        webElement.sendKeys(Keys.ENTER);
     }
 
 
